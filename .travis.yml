@@ -6,7 +6,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t changkiyun/react-test-app -f ./frontend/Dockerfile.dev ./frontend
+  - docker build -t changkiyun/react-test-app
 
 script:
   - docker run -e CI=true changkiyun/react-test-app npm test
